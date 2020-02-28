@@ -1,0 +1,22 @@
+# rakefile
+#
+# with thanks to Max Ivak for the initial code
+# https://maxivak.com/run-rspec-tests-as-a-rake-task/
+#
+
+begin
+
+  require 'rake'
+  require 'rspec/core/rake_task'
+
+  RSpec::Core::RakeTask.new(:spec) do |t|
+    t.pattern     = Dir.glob('spec/**/*_spec.rb')
+    #t.rspec_opts  = '--format documentation'
+    #t.rcov        = true
+  end
+
+  task :default => :spec
+
+rescue LoadError
+
+end
