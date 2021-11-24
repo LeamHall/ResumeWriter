@@ -1,0 +1,45 @@
+Personal Goals
+
+1. What am I looking for from senior developers?
+
+Feedback on places my code and skills need improvement. 
+Guidance on "What to learn next" given my skills and goals. 
+Saying "Go practice X and add that to your code" every couple weeks is fine.
+
+
+2. What am I learning?
+
+Deeper Perl and better SQL.
+
+
+3. What am I interested in?
+
+Writing applications that help people do fun things. 
+Writing helpful applications so people quit asking me to do boring things.
+
+
+4. Where am I now?
+
+Supporting ~200 KSLOC of Perl.
+
+Two decades of Linux/Unix experience.
+
+Building personal projects in Perl.
+  BookBot (https://github.com/LeamHall/bookbot)
+  CharacterBible (https://github.com/LeamHall/CharacterBible)
+
+Current skills:
+    Mildly useful :           Bourne Shell, Git, Linux
+    Can read:                 Perl, C, Python, Ruby, HTML, Ansible
+    Have played with:         SQL, MongoDB, Javascript, TCL, PHP
+    A little bit of:          Project Management, Network Engineering, Puppet
+
+
+5. Current Code Capabilities
+
+I tend to program in vim, write tests, and update documents.
+
+
+6. Why do more?
+
+I enjoy programming. My day job uses Perl so I'm diving into that.

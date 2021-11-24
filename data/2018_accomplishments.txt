@@ -1,0 +1,37 @@
+2018 Accomplishments
+====================
+
+STACC
+-----
+
+Automated the base Linux server build process. 
+  Reduced required time from months to hours.
+  Documented the methods and procedure.
+  Trained multiple staff on the process.
+
+Automated significant portions of the Linux patch process.
+  Transformed a two day manual task to a mostly automated off hours non-event.
+  Resolved issues due to vendor access interface changes.
+  Eliminated several manual steps.
+  Documented processes.
+  Trained operations staff on trouble-shooting.
+
+Supported and documented version control and Agile methodology efforts.
+
+Identified and escalated a significant license compliance issue.
+
+Began coursework in C programming to enhance automation skills.
+ 
+Trained my replacement.
+
+
+HITS-R
+------ 
+
+Resolved issues with third-party undocumented API changes.
+
+Provided detailed comparison with a competing project.
+
+Setup automated builds for test servers.
+
+Began training in role specific programming languages.  

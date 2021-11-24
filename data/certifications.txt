@@ -1,0 +1,15 @@
+# Certifications
+
+# Current
+
+Linux+ 
+ITIL v3 Foundation
+Security+ 
+
+# Historical
+
+Red Hat Certified Engineer (2003)
+Red Hat Certified System Administrator (2012)
+Linux LPIC-1 (2011)
+Sun Certified System Administrator (Solaris 7)
+

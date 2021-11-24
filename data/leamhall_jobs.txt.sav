@@ -1,0 +1,134 @@
+
+Programmer, Department of Defense (Parsons), (Oct 18 - present)
+
+Resolved issues with third-party undocumented API changes (Java, XML). Wrote tools to check server compliance with published security guidelines.
+
+Perl 5, STIGs
+
+
+Senior Systems Engineer, Department of Defense (Parsons), (Jul 16 - Oct 18) 
+
+Served as Subject Matter Expert for Red Hat Linux.  Worked with security and operations teams to quickly identify and resolve numerous findings.  When tasked to find a faster way to build RHEL VMs I used Kickstart and Ansible to turn a multi-week per node process into a half day task for a dozen nodes total.  Daily duties included engineering and operational support.  Provided documentation for my responsibilities and project plans for larger efforts.  Trained others on the new processes.
+	 
+Red Hat Enterprise Linux 6, Ansible, Python, Ruby, Git, STIGs
+
+
+Senior Systems Engineer, Department of Defense (APEX), (Apr 13 - Jul 16) 
+
+Served as Subject Matter Expert for Red Hat Linux.  Completed a six month stalled Industrial Control Systems project in one week.  Introduced and trained staff on new coding languages and version control.  Worked with security and operations teams to quickly identify and resolve numerous findings.  Commended by management for going above and beyond for my role.  Daily duties included engineering and operational support for over 500 servers.  Provided documentation for my responsibilities and project plans for larger efforts. 
+	 
+Red Hat Enterprise Linux 5, 6, Industrial Control Systems, Solaris 10, Puppet, Ruby, Git, STIGs
+	
+
+Linux Systems Engineer, Rackspace, (Aug 12 - Feb 13) 
+
+Served as Subject Matter Expert for e-mail storage.  Restarted a stalled but critical deployment roll to 600+ pairs of servers.  Commended by support staff for going above and beyond for my role.  Daily duties included engineering and operational support for over 1200 servers.  Worked closely with development teams and business leaders to ensure code drops were deployed successfully while minimizing downtime.  Provided documentation for my responsibilities and project plans for larger efforts.  
+	
+Red Hat Enterprise Linux 5, 6, Chef, Git, MySQL, DRBD
+	
+
+Team Lead (Linux/Unix), Department of Defense (Smartronix), (Apr 09 - Aug 12) 
+
+Led a four person team that supported a 1:45 admin to server ratio, met stringent security requirements, tripled server count with reduced staff, and dealt with a high rate of turnover due to contract requirements.  Served as a Task Force Leader during three full datacenter outages.  Ensured all servers were on regular backup schedule vice the 80% previous.  Wrote data collection (Bourne Shell) and presentation (PHP) scripts.  Wrote Policy to ensure all new servers were automatically included.  Lead the decommissioning of standard and classified systems.  Instigated the enterprise DNS project.  Trained staff on host configurations.  Provided on-call, off-hours support.  Patched RHEL, Solaris, and HP/UX servers.  Documented LVM, ASM, and Multi-pathing procedures for server configurations.  Provided business case and initial leadership for a cross-function team that eliminated hundreds of long standing security vulnerabilities.  
+	
+Red Hat Enterprise Linux 3, 4, 5 , Solaris 10, HP/UX 11.0-11.31, EMC Powerpath, HP DL, ML, PA-RISC and Itanium, Dell 2x50, 6x50.  Supported Oracle 10 RAC, Apache, Tomcat, Oracle Application Server, and COTS.  STIGs.
+
+    
+Project Manager/Network Engineer, Department of Defense (Smartronix), (May 10 - Aug 12) 
+	 
+Led the five person team that supported Cisco networking devices including IOS upgrades, enterprise reconfiguration, and documentation.  Experienced a 50% increase in network devices, removed over one half mile of unused cable and hundreds of defunct network drops, and brought a completely unsupported network infrastructure into enterprise compliance.  Worked with Global WAN teams to resolve issues.  Enabled enterprise wide network device monitoring.  Received higher headquarters compliments on network security posture.  Wrote, tested, trained, and utilized bare metal switch recovery.  Wrote and Implemented VLAN scheme to prepare for massive server growth.  Commended by higher headquarters auditing staff on network security posture and documentation.  Provided business case and garnered customer support for a scheduled network outage affecting several dozen applications.  
+ 	
+Cisco IOS 12.2(x),  STIGs
+
+
+Senior Systems Engineer, Independent Contractor, (Sep 08 - present) 
+
+Supported OS testing teams and client projects.  Patched servers as needed.  Automated processes, wrote standards, and trained System Admins.  Provided written evaluations of vendor software.  Performed Security tool testing.		
+	
+Red Hat Enterprise Linux 3, 4, 5, 6, 7,  Solaris 10, 11, Fedora, Oracle Linux, SUSE Enterprise Linux, 
+
+
+Senior Systems Engineer, Wachovia Bank, (Dec 05 - Aug 08) 
+	 
+Developed interdisciplinary customer feedback loop for the Distributed Systems Engineering team.  Automated processes, wrote standards, and trained incoming engineers.  Provided on-call centralized security application support for 3,000+ servers.  Provided written evaluations of vendor software.
+	
+Red Hat Enterprise Linux 2, 3, 4, 5.  Solaris 8, 9, 10.  HP/UX 11.0-11.31.  SuSE Linux Enterprise Server (SLES) 8, 9, 10.  HP DL, ML, and PA-RISC, Dell 2x50, 6x50. 
+
+    
+Systems Engineer, Bank of America (Apex Systems), (May 05 - Dec 05) 
+	 
+Automated processes, wrote standards, and trained incoming engineers.  Build, configure, and trouble-shoot large scale datacenter.	Patched servers, replaced failed hardware, and maintained systems in production state.  
+	
+Red Hat Enterprise Linux 2, 3, 4.  Solaris 8, 9, 10.  HP/UX 11.0-11.31.  EMC Powerpath.  IBM Blade Chassis.  Fujitsu Primepower, Sun mid-range, and IBM Power servers.  HP DL, ML, Dell 2x50, 6x50. 
+
+
+Senior Unix Engineer, Transamerica Reinsurance, Inc. (Contractor), (Sep 04 - May 05) 
+	 
+Commended by parent company for automation of Solaris Jumpstart and Red Hat Kickstart implementation and procedures.  Configured Apache and Tomcat to support application development team's needs. 
+	
+Solaris 2.5, 6, 7, 8, 9.  Red Hat Enterprise Linux 2, 3, 4.  Supported: Oracle 7, 8.  Veritas Volume Manager/Filesystem 2.x, 3.x.  Sendmail, Apache, Tomcat. 
+	
+
+Senior Unix Engineer, Wall Street Journal/Dow Jones, Inc., (Jan 01 - Sep 04) 
+
+Saved ~$200,000 by providing Application Development team custom software to increase availability.  Analyzed life-cycle server configurations to save $120,000 in license costs.  Automated Solaris Jumpstart and Red Hat Kickstart implementation and procedures.  Reduced n-tiered 30 minute SLAs to a 3 minute response time with direct hand-off, 24x7x365.25. 
+	
+Solaris 2.4, 2.5, 6, 7, 8, 9, Red Hat Enterprise Linux 2, 3, 4, Sun Cluster 2.2, Legato backup, Supported: Oracle 7, 8. Vignette Story Server, Veritas Volume Manager/Filesystem 2.x, 3.x, Sendmail, Apache, Tomcat 
+    
+
+Senior Unix Engineer, Rosenbluth International, (May 00 - Dec 00) 
+
+Worked with developers to standardize deployment processes for application software.  Investigated VM solutions for datacenter.  Day to day operational support. 
+	
+Solaris 7, 8, 9, Red Hat Enterprise Linux 3, Legato backup, Supported: Oracle 7, 8, Veritas Volume Manager/Filesystem 2.x, 3.x, Sendmail, Apache, Tomcat 
+	
+    
+Team Lead (Software Deployment), Bell Atlantic/Verizon (TekSystems, Inc.), (1999 - 2000) 
+
+Team Lead for the Bell Atlantic Distributed Software Operations-Software Deployment ISO 9002 certified group responsible for deploying over 70 application packages and software/OS upgrades to more than 1100 production Unix (Solaris, HP-UX) servers in the North-Eastern US region. Responsibilities included building and modifying shell scripts, performing remote software deployments, supervising six deployment specialists, troubleshooting server and package errors, coordinating 150+ item change control procedures, and recovering from outages in minimal time. Built a certification resource web site, trained new hires, wrote a Tk based graphical interface to unify existing scripts, taught basic HTML, introduced software version control, and improved the workload assignment process. 
+	
+Solaris 6, 7, 8, HP/UX 11 
+    
+
+Senior Unix Administrator, Wall Street Journal/Dow Jones Inc. (TekSystems, Inc.), (1998 - 1999) 
+
+Saved over $75,000 in new-hire costs by analyzing, communicating, and tracking required production support skills on limited use software.  Level 2 support for print Journal.  Documented procedures for Help Desk staff. 
+	
+Solaris 6, 7, 8, Legato backup, Veritas Volume Manager/Filesystem 2.x, 3.x 
+
+
+Unix Engineer, Independent Contractor, (1998 - 1998) 
+
+Documented improved server configurations to fix backup issues.  Configured Apache.
+	
+Red Hat Linux 3, 4, 5, 6, 7, 8, 9, SCO Unix, Sendmail, Apache, Tomcat 
+    
+
+Linux Admin, Spidernet s.r.l, Repubblica Italiana, (1997 - 1998) 
+	
+Supported Linux and Solaris in a multi-lingual environment.  Configured Apache to support application development team's needs.  Took ownership of OS and hardware production issues and channeled application issues to specialists.  
+
+Solaris 2.5, Red Hat Linux 3, 4, 5, 6, Sendmail, Apache, Tomcat 
+    
+
+
+Director of Operations, City of Glenarden, MD, (1994 - 1995)  
+
+Served as Acting City Manager. Supervised 5 direct reports and 32 total staff. 
+    
+
+Small Business Manager, Entrepreneur, (1990 - 1994) 
+
+Ran a training business that met a 700% student increase in 13 months. Added revenue streams for related products without requiring large inventory loads.
+
+
+Operations Section Manager, U.S. Air Force, (1988 - 1992) 
+
+Training supervisor for Southern Command AF Disaster Response personnel, first-responder to critical incidents.
+ 
+
+Teletype Maintenance Technician, U.S. Air Force, (1982 - 1988)
+
+Supported secure digital communications equipment in the U.S. and U.K.
+
+
