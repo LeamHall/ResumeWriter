@@ -1,7 +1,0 @@
-Aqueduct https://github.com/BuddhaLabs/Aqueduct/contributors
-Perl Text::IQ::EN https://github.com/karpet/text-iq-perl/commit/c87aa7d00282a4691dc50f40bedcd4a099c2a25f
-Docker/MariaDB document updates https://github.com/docker-library/docs/pull/2055
-Ruby IO-Console testing PR  https://github.com/ruby/io-console/pull/16/commits/f4f886694fd9084b113e5cb83ed0d1649629fb57
-Ruby Community Pull Request https://github.com/ruby-community/ruby-community/pull/49
-Ruby Koans PR https://github.com/edgecase/ruby_koans/pull/21/commits/2d6926d381518bc7ce01842cc60a8d7837e311dd
-PHP adds for a gaming forum  https://github.com/TheUnseenServant/uss_chargen
