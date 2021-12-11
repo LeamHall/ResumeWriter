@@ -38,8 +38,20 @@ def write_data(filename, formatter, data):
     file.write(formatter.format(**data)) 
   file.close()
 
+def ensure_write_dir(directory):
+  ''' directory name => creates if not exist, verifies dir and writeable.
+    else raise exception.
+  '''
+  if not os.path.isdir(directory):
+    try:
+      os.mkdir(directory, 0o0755)
+    except OSError as ose:
+      print("Cannot create directory")
+      os._exit(1)
+
 
 ###
+ensure_write_dir(output_dir)
 
 job_keys = job_data.keys()
 for job in sorted(job_keys, reverse=True):
