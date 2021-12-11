@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# name:     ce_to_json.py
+# name:     parse_ce.py
 # version:  0.0.1
 # date:     20211211
 # author:   Leam Hall

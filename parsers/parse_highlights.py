@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# name:     contact_to_json.py
+# name:     parse_highlights.py
 # version:  0.0.1
 # date:     20211211
 # author:   Leam Hall
@@ -13,19 +13,18 @@
 # Typical file (the first "word" should be a valid dict key):
 #   If you create your own templates then you can add whatever keys you need.
 #
-#   name      Luke Skywalker
-#   phone     555.555.1212
-#   linkedin  https://linkedin.com/LSkywalker
-#   github    https://github.com/ihatetatoonie
+#   Shovel Dirt:  Moved it hither and yon
+#   Dirt Shoveler: Commened for the hither portion of my dirt shovelling.
+
 
 import json
 import os
 import re
 
 input_dir   = "input"
-json_file   = os.path.join(input_dir, "contact.json")
+json_file   = os.path.join(input_dir, "highlights.json")
 data_dir    = "data"
-data_file   = os.path.join(data_dir, "contact.txt")
+data_file   = os.path.join(data_dir, "highlights.txt")
 
 def ensure_write_dir(directory):
   ''' directory name => creates if not exist, verifies dir and writeable.
@@ -43,18 +42,18 @@ def ensure_write_dir(directory):
 
 ensure_write_dir(input_dir)
 
-contact = {}
+highlights = {}
 with open(data_file, 'r') as c:
   for line in c.readlines():
     line = line.strip()
     if len(line) < 5:
       continue
-    key, value    = line.split(" ", maxsplit = 1)
-    key           = key.strip()
-    value         = value.strip()
-    contact[key]  = value
+    key, value      = line.split(":")
+    key             = key.strip()
+    value           = value.strip()
+    highlights[key] = value
 
 with open(json_file, 'w') as out:
-  out.write(json.dumps(contact, indent = 4))
+  out.write(json.dumps(highlights, indent = 4))
   out.close()
 
