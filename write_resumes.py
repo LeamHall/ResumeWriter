@@ -22,9 +22,17 @@ job_data    = json.loads(data)
 
 resume_short_text_file_name = os.path.join(output_dir, "resume_short.txt")
 resume_long_text_file_name  = os.path.join(output_dir, "resume_long.txt")
+resume_full_text_file_name  = os.path.join(output_dir, "resume_full.txt")
 resume_short_html_file_name = os.path.join(output_dir, "resume_short.html")
 resume_long_html_file_name  = os.path.join(output_dir, "resume_long.html")
+resume_full_html_file_name  = os.path.join(output_dir, "resume_full.html")
 
+string_short_text   = ""
+string_long_text    = ""
+string_full_text    = ""
+string_short_html   = ""
+string_long_html    = ""
+string_full_html    = ""
 
 job_short_text  = "\n\n{title}, {customer} ({start} - {stop})"
 job_long_text   = job_short_text + "\n\n{blurb}\n"
@@ -32,10 +40,9 @@ job_short_html  = "\n\n<p><b>{title}</b>  {customer} ({start} - {stop})</p>"
 job_long_html   = job_short_html + "\n\n<br><br>{blurb}\n<br><br>"
 
 
-# This assumes you start with a clear job section on your resume.
-def write_data(filename, formatter, data):
+def write_data(filename, string):
   with open(filename, 'a') as file:
-    file.write(formatter.format(**data)) 
+    file.write(string)
   file.close()
 
 def ensure_write_dir(directory):
@@ -52,11 +59,18 @@ def ensure_write_dir(directory):
 
 ###
 ensure_write_dir(output_dir)
+for file in os.scandir(output_dir):
+  os.remove(file)
 
 job_keys = job_data.keys()
 for job in sorted(job_keys, reverse=True):
-  write_data(resume_short_text_file_name, job_short_text, job_data[job]) 
-  write_data(resume_short_html_file_name, job_short_html, job_data[job]) 
-  write_data(resume_long_text_file_name, job_long_text, job_data[job]) 
-  write_data(resume_long_html_file_name, job_long_html, job_data[job]) 
+  string_short_text += job_short_text.format(**job_data[job])
+  string_long_text  += job_long_text.format(**job_data[job])
+  string_short_html += job_short_html.format(**job_data[job])
+  string_long_html  += job_long_html.format(**job_data[job])
+
+write_data(resume_short_text_file_name, string_short_text) 
+write_data(resume_long_text_file_name, string_long_text) 
+write_data(resume_short_html_file_name, string_short_html) 
+write_data(resume_long_html_file_name, string_long_html) 
 
