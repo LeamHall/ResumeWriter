@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# name:     job_parser.py
+# name:     scrape_text_resume.py
 # version:  0.0.1
 # date:     20211210
 # author:   Leam Hall
@@ -23,12 +23,6 @@ import re
 # These need to be command line options.
 job_filename    = 'data/jobs.txt'
 jobs_dir        = 'data/jobs'
-jobs_json_file  = os.path.join(jobs_dir, "jobs.json")
-jobs_dict       = {}
-
-# This needs to be configurable.
-header_line   = '#title:customer:start_date:end_date'
-
 
 def write_file(data):
   ''' string, dict => writes to file
@@ -36,9 +30,8 @@ def write_file(data):
   try:
     file_path = os.path.join(jobs_dir, data['filename'])
     with open(file_path, 'w') as f:
-      f.write("{}\n".format(header_line))
       header_string = ":".join([data['title'], data['customer'],
-        data['start'], data['stop']])
+        data['start'], data['stop'], data['key']])
       f.write("{}\n".format(header_string))
       f.write("\n{}\n".format(data['blurb']))
       f.close()
@@ -55,7 +48,7 @@ def ensure_write_dir(directory):
       os.mkdir(directory, 0o0755)
     except OSError as ose:
       print("Cannot create directory")
-      os.exit(1)
+      os._exit(1)
 
 
 def make_key_filename(data):
@@ -107,14 +100,9 @@ try:
     else:
       j_data['blurb']           = line
       write_file(j_data)
-      jobs_dict[j_data['key']]  = j_data.copy()
 
-  with open(jobs_json_file, 'w') as j:
-    j.write(json.dumps(jobs_dict, indent=4))
-    j.close()
- 
 except FileNotFoundError as e:
   print("Can't find file.")
-  os.exit(1)
+  os._exit(1)
 
 

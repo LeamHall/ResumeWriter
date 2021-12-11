@@ -6,6 +6,7 @@
 /test/version_tmp/
 /tmp/
 /output/
+/input/
 /data/
 
 # vi(m) temp files.
