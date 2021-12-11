@@ -20,45 +20,31 @@ job_file    = os.path.join(input_dir, "jobs.json")
 data        = open(job_file, 'r').read()
 job_data    = json.loads(data)
 
-resume_short_text_file = os.path.join(output_dir, "resume_short.txt")
-resume_long_text_file  = os.path.join(output_dir, "resume_long.txt")
-resume_short_html_file = os.path.join(output_dir, "resume_short.html")
-resume_long_html_file = os.path.join(output_dir, "resume_long.html")
+resume_short_text_file_name = os.path.join(output_dir, "resume_short.txt")
+resume_long_text_file_name  = os.path.join(output_dir, "resume_long.txt")
+resume_short_html_file_name = os.path.join(output_dir, "resume_short.html")
+resume_long_html_file_name  = os.path.join(output_dir, "resume_long.html")
 
 
-job_short_text  = "\n\n{}, {} ({} - {})"
-job_long_text   = job_short_text + "\n\n{}\n"
-job_short_html  = "\n\n<p><b>{}</b>  {} ({} - {})</p>"
-job_long_html   = job_short_html + "\n\n<br><br>{}\n<br><br>"
+job_short_text  = "\n\n{title}, {customer} ({start} - {stop})"
+job_long_text   = job_short_text + "\n\n{blurb}\n"
+job_short_html  = "\n\n<p><b>{title}</b>  {customer} ({start} - {stop})</p>"
+job_long_html   = job_short_html + "\n\n<br><br>{blurb}\n<br><br>"
 
-resume_short_text_file  = open(resume_short_text_file, 'w')
-resume_long_text_file   = open(resume_long_text_file, 'w')
-resume_short_html_file  = open(resume_short_html_file, 'w')
-resume_long_html_file   = open(resume_long_html_file, 'w')
 
-class Job:
+# This assumes you start with a clear job section on your resume.
+def write_data(filename, formatter, data):
+  with open(filename, 'a') as file:
+    file.write(formatter.format(**data)) 
+  file.close()
 
-  def __init__(self, data):
-    self.title = data['title']
-    self.customer = data['customer']
-    self.start    = data['start']
-    self.stop     = data['stop']
-    self.blurb    = data['blurb']
 
-def write_data(file, formatter):
-  file.write(formatter) 
+###
 
-#print(json.dumps(job_data, indent = 2))
 job_keys = job_data.keys()
 for job in sorted(job_keys, reverse=True):
-  j = Job(job_data[job])
-
-  write_data(resume_short_text_file, 
-    job_short_text.format(j.title, j.customer, j.start, j.stop))
-  write_data(resume_long_text_file, 
-    job_long_text.format(j.title, j.customer, j.start, j.stop, j.blurb))
-  write_data(resume_short_html_file, 
-    job_short_html.format(j.title, j.customer, j.start, j.stop))
-  write_data(resume_long_html_file, 
-    job_long_html.format(j.title, j.customer, j.start, j.stop, j.blurb))
+  write_data(resume_short_text_file_name, job_short_text, job_data[job]) 
+  write_data(resume_short_html_file_name, job_short_html, job_data[job]) 
+  write_data(resume_long_text_file_name, job_long_text, job_data[job]) 
+  write_data(resume_long_html_file_name, job_long_html, job_data[job]) 
 
