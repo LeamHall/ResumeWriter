@@ -50,7 +50,7 @@ datum for passing around however you see fit.
 
 ## Writing the job resume stuff
 
-  write_resumes.py
+    write_resumes.py
 
 Okay, yes. There are much better templating systems out there. I tend to use
 the standard library, and I wanted to make myself code a bit more. You probably
