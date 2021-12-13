@@ -34,7 +34,8 @@ strings = { "short_text" : "", "long_text": "", "full_text":"",
 job_short_text  = "\n\n{title}, {customer} ({start} - {stop})"
 job_long_text   = job_short_text + "\n\n{blurb}\n"
 job_short_html  = "\n\n<p><b>{title}</b>  {customer} ({start} - {stop})</p>"
-job_long_html   = job_short_html + "\n\n<br><br>{blurb}\n<br><br>"
+job_long_html   = job_short_html + "\n\n{blurb}\n<br><br>"
+
 
 def write_data(filename, string):
   with open(filename, 'a') as file:
@@ -72,6 +73,36 @@ education       = parsers.education(check_datafile(data_dir, "edu.txt"))
 highlights      = parsers.highlights(check_datafile(data_dir, "highlights.txt"))
 jobs            = parsers.jobs(job_data_dir)
 
+
+## contact info
+contact_format_text   = "\n{name:30}{email:>30}\n{github:>60}"
+contact_format_text   += "\n{phone:20}{linkedin:>40}\n\n"
+con_str_text          = contact_format_text.format(**contact)
+strings['long_text']  += con_str_text
+contact_format_html   = "<table width='100%'><tr><td align='left'><b>{name}</b></td>"
+contact_format_html   += "<td align='right'><b>{email}</b></td></tr>"
+contact_format_html   += "\n<tr><td>&nbsp</td><td align='right'><b><a href=\"{github}\">GitHub</a></b></td></tr>"
+contact_format_html   += "\n<tr><td align='left'><b>{phone}</b></td>"
+contact_format_html   += "<td align='right'><b><a href=\"{linkedin}\">LinkedIn</a></b></td></tr>"
+contact_format_html   += "</table>\n\n"
+con_str_html          = contact_format_html.format(**contact)
+strings['long_html']  += con_str_html
+
+## highlights
+strings['long_text']  += "\nRelevant Technical Skills\n"
+strings['long_html']  += "<h3>Relevant Technical Skills</h3>\n<ul>\n"
+highlight_format_text = "\n{}   {}\n"
+highlight_format_html = "\n<li><b>{}</b>  {}</li>\n"
+for key, value  in highlights.items():
+  strings['long_text']  += highlight_format_text.format(key, value)
+  strings['long_html']  += highlight_format_html.format(key, value)
+
+
+## experience
+
+strings['long_html']    += "\n</ul>\n\n"
+strings['long_text']    += "\n\nExperience\n"
+strings['long_html']    += "\n\n<br><h3>Experience</h3>\n\n"
 
 job_keys = jobs.keys()
 for job in sorted(job_keys, reverse=True):
