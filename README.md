@@ -29,7 +29,7 @@ This will break each job into a single file, in data/jobs. For example:
 
     Farm Hand:Tatoonie:5382:5400:5382_5400_tatoonie
 
-    Working the family farm; harvesting dirt. Hightly successful.
+    Working the family farm; harvesting dirt. Highly successful.
 
 You can then keep the jobs in version control, and edit just what you need
 to edit, based on feedback and career goals. The first line, starting
@@ -37,29 +37,25 @@ to edit, based on feedback and career goals. The first line, starting
 
   Job Title:Customer:Start Date:End Date:dict_key_based_on_dates_and_customer
 
+There are also files for continuing education ("ce.txt"), certifications 
+("certifications.txt"), education ("edu.txt"), career highlights
+("highlights.txt), and open source contributions ("contributions.txt").
+
 Copy the "sample_data/" directory to "data/" to see what happens.
-
-
-## Getting a JSON file of the jobs
-
-    parse_job_files.py
-
-This reads those single files and then creates "input/jobs.json" as a single
-datum for passing around however you see fit.
 
 
 ## Writing the job resume stuff
 
-    write_resumes.py
+    resume_writer.py
 
 Okay, yes. There are much better templating systems out there. I tend to use
-the standard library, and I wanted to make myself code a bit more. You probably
-want to alter the formatters, and if I can figure out a good templating system
-I will add it. 
+the standard library. You may want to alter the formatters, and when I figure 
+out a good templating system I will add it. 
 
-Anyway, write_resumes.py takes the json file and writes short and long versions,
-in both text and HTML. The short version is just the job header information, 
-the long version includes the blurb.
+Anyway, resume_writer.py takes the text files and writes varous versions in 
+both text and HTML. The short version is just the job header information, the 
+long version includes the blurb and other stuff. I tend to use the HTML version
+to import into a word processer to create both docx and PDF formats.
 
 
 ## Future State

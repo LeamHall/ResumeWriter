@@ -67,7 +67,7 @@ for file in os.scandir(output_dir):
 ce_list         = parsers.continuing_edu(check_datafile(data_dir, "ce.txt"))
 certifications  = parsers.certifications(check_datafile(data_dir, "certifications.txt"))
 contact         = parsers.contact(check_datafile(data_dir, "contact.txt"))
-contributions   = parsers.contributions(check_datafile(data_dir, "open_source_contributions.txt"))
+contributions   = parsers.contributions(check_datafile(data_dir, "contributions.txt"))
 education       = parsers.education(check_datafile(data_dir, "edu.txt"))
 highlights      = parsers.highlights(check_datafile(data_dir, "highlights.txt"))
 jobs            = parsers.jobs(job_data_dir)
