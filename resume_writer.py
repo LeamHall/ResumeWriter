@@ -76,13 +76,13 @@ jobs            = parsers.jobs(job_data_dir)
 
 ## contact info
 contact_format_text   = "\n{name:30}{email:>30}\n{github:>60}"
-contact_format_text   += "\n{phone:20}{linkedin:>40}\n\n"
+contact_format_text   += "\n{linkedin:>60}\n\n"
 con_str_text          = contact_format_text.format(**contact)
 strings['long_text']  += con_str_text
 contact_format_html   = "<table width='100%'><tr><td align='left'><b>{name}</b></td>"
 contact_format_html   += "<td align='right'><b>{email}</b></td></tr>"
 contact_format_html   += "\n<tr><td>&nbsp</td><td align='right'><b><a href=\"{github}\">GitHub</a></b></td></tr>"
-contact_format_html   += "\n<tr><td align='left'><b>{phone}</b></td>"
+contact_format_html   += "\n<tr><td align='left'></td>"
 contact_format_html   += "<td align='right'><b><a href=\"{linkedin}\">LinkedIn</a></b></td></tr>"
 contact_format_html   += "</table>\n\n"
 con_str_html          = contact_format_html.format(**contact)
