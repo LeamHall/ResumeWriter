@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 
-# name:         write_resumes.py
+# name:     write_resumes.py
 # version:  0.0.1
-# date:         20211210
-# author:       Leam Hall
-# desc:         Pulls json files and writes various resume types.
+# date:     20211210
+# author:   Leam Hall
+# desc:     Pulls json files and writes various resume types.
 
 ## Notes:
 #
 #  1. Really needs to use resume templates, but I don't want to go 
-#               outside of the standard library.
+#       outside of the standard library.
 
 import json
 import os
@@ -38,6 +38,9 @@ job_long_html   = job_short_html + "\n\n{blurb}\n<br><br>"
 
 
 def write_data(filename, string):
+    """
+    Appends data to the file
+    """
     with open(filename, 'a') as file:
         file.write(string)
     file.close()
