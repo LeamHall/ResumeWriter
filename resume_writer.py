@@ -11,21 +11,30 @@
 #  1. Really needs to use resume templates, but I don't want to go 
 #       outside of the standard library.
 
+import argparse
 import json
 import os
 import re
 
 
-output_dir      = "output"
-data_dir        = "data"
-job_data_dir    = os.path.join(data_dir, "jobs")
+parser = argparse.ArgumentParser()
+parser.add_argument("-d", "--data_dir", help="Data directory", default="data")
+parser.add_argument("-o", "--output_dir", help="Output directory", default="output")
+parser.add_argument("-p", "--prefix", help="filename prefix", default="resume")
+parser.add_argument("-j", "--job_dir", help="Job info directory", default="jobs")
+args = parser.parse_args()
 
-resume_short_text_file_name = os.path.join(output_dir, "resume_short.txt")
-resume_long_text_file_name  = os.path.join(output_dir, "resume_long.txt")
-resume_full_text_file_name  = os.path.join(output_dir, "resume_full.txt")
-resume_short_html_file_name = os.path.join(output_dir, "resume_short.html")
-resume_long_html_file_name  = os.path.join(output_dir, "resume_long.html")
-resume_full_html_file_name  = os.path.join(output_dir, "resume_full.html")
+output_dir      = args.output_dir
+data_dir        = args.data_dir
+prefix          = args.prefix
+job_data_dir    = os.path.join(args.data_dir, args.job_dir)
+
+short_text_file_name = os.path.join(output_dir, prefix + "_short.txt")
+long_text_file_name  = os.path.join(output_dir, prefix + "_long.txt")
+full_text_file_name  = os.path.join(output_dir, prefix + "_full.txt")
+short_html_file_name = os.path.join(output_dir, prefix + "_short.html")
+long_html_file_name  = os.path.join(output_dir, prefix + "_long.html")
+full_html_file_name  = os.path.join(output_dir, prefix + "_full.html")
 
 strings = { "short_text" : "", "long_text": "", "full_text":"",
     "short_html":"", "long_html":"", "full_html":"" 
@@ -41,7 +50,7 @@ def write_data(filename, string):
     """
     Appends data to the file
     """
-    with open(filename, 'a') as file:
+    with open(filename, 'w') as file:
         file.write(string)
     file.close()
 
@@ -187,8 +196,8 @@ def jobs(data_dir):
 if __name__ == "__main__":            
     ###
     ensure_write_dir(output_dir)
-    for file in os.scandir(output_dir):
-        os.remove(file)
+    #for file in os.scandir(output_dir):
+    #    os.remove(file)
 
     ce_list         = continuing_edu(
                         check_datafile(data_dir, "ce.txt"))
@@ -243,8 +252,8 @@ if __name__ == "__main__":
         strings['long_html']  += job_long_html.format(**jobs[job])
 
 
-    write_data(resume_short_text_file_name, strings['short_text']) 
-    write_data(resume_long_text_file_name, strings['long_text']) 
-    write_data(resume_short_html_file_name, strings['short_html']) 
-    write_data(resume_long_html_file_name, strings['long_html']) 
+    write_data(short_text_file_name, strings['short_text']) 
+    write_data(long_text_file_name, strings['long_text']) 
+    write_data(short_html_file_name, strings['short_html']) 
+    write_data(long_html_file_name, strings['long_html']) 
 
