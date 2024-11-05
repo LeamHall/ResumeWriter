@@ -54,6 +54,7 @@ def write_data(filename, string):
         file.write(string)
     file.close()
 
+
 def ensure_write_dir(directory):
     ''' directory name => creates if not exist, verifies dir and writeable.
         else raise exception.
@@ -65,12 +66,14 @@ def ensure_write_dir(directory):
             print("Cannot create directory")
             os._exit(1)
 
+
 def check_datafile(data_dir, filename):
     datafile    = os.path.join(data_dir, filename)
     if os.access(datafile, os.R_OK):
         return datafile
     else:
         raise PermissionError("{} does not exists or cannot read".format(datafile))
+
 
 def continuing_edu(datafile):
     """ text data file => list of string """
@@ -149,7 +152,7 @@ def education(datafile):
 
 
 def highlights(datafile):
-    """ text data file => dict of contact key, contact value """
+    """ text data file => dict of highlights key, highlights value """
     highlights = {}
     with open(datafile, 'r') as data:
         for line in data.readlines():
@@ -161,6 +164,14 @@ def highlights(datafile):
             value           = value.strip()
             highlights[key] = value
     return highlights
+
+
+def single_line(datafile):
+    """ text data file => string of data """
+    with open(datafile, 'r') as data:
+        line = data.read()
+        line = line.strip()
+    return line
 
 
 def make_job_header(line):
@@ -196,9 +207,9 @@ def jobs(data_dir):
 if __name__ == "__main__":            
     ###
     ensure_write_dir(output_dir)
-    #for file in os.scandir(output_dir):
-    #    os.remove(file)
 
+    blurb           = single_line(
+                        check_datafile(data_dir, "blurb.txt"))
     ce_list         = continuing_edu(
                         check_datafile(data_dir, "ce.txt"))
     certifications  = certifications(
@@ -212,17 +223,23 @@ if __name__ == "__main__":
     highlights      = highlights(
                         check_datafile(data_dir, "highlights.txt"))
     jobs            = jobs(job_data_dir)
+    title           = single_line(
+                        check_datafile(data_dir, "title.txt"))
+    
 
+    contact["blurb"] = blurb
+    contact["title"] = title
 
     ## contact info
-    contact_format_text     = "\n{name:30}{email:>30}\n{github:>60}"
-    contact_format_text     += "\n{linkedin:>60}\n\n"
+    contact_format_text     = "\n{name:120}{email:>30}"
+    contact_format_text     += "\n{github:>150}"
+    contact_format_text     += "\n{blurb:120}{linkedin:>30}\n\n"
     con_str_text            = contact_format_text.format(**contact)
     strings['long_text']    += con_str_text
     contact_format_html     = "<table width='100%'><tr><td align='left'><b>{name}</b></td>"
     contact_format_html     += "<td align='right'><b>{email}</b></td></tr>"
     contact_format_html     += "\n<tr><td>&nbsp</td><td align='right'><b><a href=\"{github}\">GitHub</a></b></td></tr>"
-    contact_format_html     += "\n<tr><td align='left'></td>"
+    contact_format_html     += "\n<tr><td align='left'>{blurb}</td>"
     contact_format_html     += "<td align='right'><b><a href=\"{linkedin}\">LinkedIn</a></b></td></tr>"
     contact_format_html     += "</table>\n\n"
     con_str_html            = contact_format_html.format(**contact)
