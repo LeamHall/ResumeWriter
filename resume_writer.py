@@ -233,7 +233,8 @@ if __name__ == "__main__":
     ## contact info
     contact_format_text     = "\n{name:120}{email:>30}"
     contact_format_text     += "\n{github:>150}"
-    contact_format_text     += "\n{blurb:120}{linkedin:>30}\n\n"
+    contact_format_text     += "\n{linkedin:>150}\n\n"
+    contact_format_text     += "\n{blurb:120}\n\n"
     con_str_text            = contact_format_text.format(**contact)
     strings['long_text']    += con_str_text
     contact_format_html     = "<table width='100%'><tr><td align='left'><b>{name}</b></td>"
@@ -246,11 +247,11 @@ if __name__ == "__main__":
     strings['long_html']    += con_str_html
 
     ## highlights
-    #strings['long_text']    += "\nRelevant Technical Skills\n"
+    strings['long_text']    += "\nRelevant Technical Skills:\n"
     #strings['long_html']    += "<h3>Relevant Technical Skills</h3>\n<ul>\n"
     strings['long_text']    += "\n"
     strings['long_html']    += "\n<ul>\n"
-    highlight_format_text = "\n{}   {}\n"
+    highlight_format_text = "\n{}:   {}\n"
     highlight_format_html = "\n<li><b>{}</b>  {}</li>\n"
     for key, value  in highlights.items():
         strings['long_text']    += highlight_format_text.format(key, value)
@@ -260,7 +261,7 @@ if __name__ == "__main__":
     ## experience
 
     strings['long_html']    += "\n</ul>\n\n"
-    #strings['long_text']    += "\n\nExperience\n"
+    strings['long_text']    += "\n\nExperience:\n"
     #strings['long_html']    += "\n\n<br><h3>Experience</h3>\n\n"
 
     job_keys = jobs.keys()
