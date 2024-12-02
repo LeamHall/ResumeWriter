@@ -246,8 +246,10 @@ if __name__ == "__main__":
     strings['long_html']    += con_str_html
 
     ## highlights
-    strings['long_text']    += "\nRelevant Technical Skills\n"
-    strings['long_html']    += "<h3>Relevant Technical Skills</h3>\n<ul>\n"
+    #strings['long_text']    += "\nRelevant Technical Skills\n"
+    #strings['long_html']    += "<h3>Relevant Technical Skills</h3>\n<ul>\n"
+    strings['long_text']    += "\n"
+    strings['long_html']    += "\n<ul>\n"
     highlight_format_text = "\n{}   {}\n"
     highlight_format_html = "\n<li><b>{}</b>  {}</li>\n"
     for key, value  in highlights.items():
@@ -258,8 +260,8 @@ if __name__ == "__main__":
     ## experience
 
     strings['long_html']    += "\n</ul>\n\n"
-    strings['long_text']    += "\n\nExperience\n"
-    strings['long_html']    += "\n\n<br><h3>Experience</h3>\n\n"
+    #strings['long_text']    += "\n\nExperience\n"
+    #strings['long_html']    += "\n\n<br><h3>Experience</h3>\n\n"
 
     job_keys = jobs.keys()
     for job in sorted(job_keys, reverse=True):
